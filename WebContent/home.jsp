@@ -1,72 +1,133 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%--  <%@include file="./navbar.jsp"%> --%>
+    <%@ include file="navbar.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="<%=request.getContextPath()+"/resource/home.css"%>">
 </head>
 <body>
-	<div class="home">
-		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-		  <div class="carousel-inner">
-		    <div class="carousel-item active">
-		      <img src="<%=request.getContextPath() + "/asset/banner-1.jpg"%>" class="d-block w-100" alt="...">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="<%=request.getContextPath() + "/asset/banner-2.jpg"%>" class="d-block w-100" alt="...">
-		    </div>
-		    <div class="carousel-item">
-		      <img src="<%=request.getContextPath() + "/asset/banner-3.jpg"%>" class="d-block w-100" alt="...">
-		    </div>
-		  </div>
-		  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
-	</div>
-	<div class="banner">
-		<div class="banner-item item-1">
-			<img src="https://livani-react.envytheme.com/_next/static/images/categories1-b467ebb8485559cdbc1530b3c8175d33.jpg" class="banner-img">
-			<div class="txt-frame">
-				<p>Don't Miss Today</p>
-				<h3>50% Off</h3>
+	<div class="home-container">
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+		  		<div class="numbertext">1 / 3</div>
+		 
+		 		<img src=" https://livani-react.envytheme.com/_next/static/media/main-banner1.037c44b65691964462935770ee2e8107.jpg" style="width:100%">
+		  		<div class="text">
+		  			<h4>Limited Time Offer!</h4>
+		  			<h2>Winter-Spring!</h2>
+		  			<p>Take 20% Off 'Sale Must-Haves'</p>
+		  			<div class="btn-container">
+		  				<button class="btn-pink">Shop Women's</button>
+		  				<button class="btn-gray">Shop Mens</button>
+		  			</div>
+		  		</div>
 			</div>
-		</div>
-		<div class="banner-item item-2">
-			<img src="https://livani-react.envytheme.com/_next/static/images/categories2-576415a29304115e08be923ddebafca5.jpg" class="banner-img">
-			<div class="txt-frame">
-				<p>New Collection</p>
-				<h3>Need Now</h3>
-			</div>
-			<button type="button" class="btn btn-outline-secondary btn-banner">Discovery Now</button>
-		</div>
-		<div class="banner-item item-3">
-			<img src="https://livani-react.envytheme.com/_next/static/images/categories3-d589e5d06fb3ebd48d28f804250e9371.jpg" class="banner-img">
-			<div class="txt-frame">
-				<p>Your Looks</p>
-				<h3>Must Haves</h3>
-			</div>
-		</div>
-		<div class="banner-item item-4">
-			<img src="https://livani-react.envytheme.com/_next/static/images/categories4-4805bf91a67631aa07c7ca2c541ef131.jpg" class="banner-img">
-			<div class="txt-frame">
-				<p>Don't Miss Today</p>
-				<h3>50% Off</h3>
-			</div>
-		</div>
 		
+			<div class="mySlides fade">
+		  		<div class="numbertext">2 / 3</div>
+		 		<img src="https://livani-react.envytheme.com/_next/static/media/main-banner2.b450957bbc5ad97ca45c9a721e2f6bae.jpg" style="width:100%">
+		  		<div class="text text-2">
+		  			<h4>Limited Time Offer!</h4>
+		  			<h2>Winter-Spring!</h2>
+		  			<p>Take 20% Off 'Sale Must-Haves'</p>
+		  			<div class="btn-container">
+		  				<button class="btn-pink">Shop Women's</button>
+		  				<button class="btn-gray">Shop Mens</button>
+		  			</div>
+		  		</div>
+			</div>
+			<div class="mySlides fade">
+		  		<div class="numbertext">3 / 3</div>
+		  		<img src="https://livani-react.envytheme.com/_next/static/media/main-banner3.f1172bd804136243b4ef1752767b8724.jpg" style="width:100%">
+		  		<div class="text text-2 text-3">
+		  			<h4>Buy Now From Livani!</h4>
+		  			<h2>New Season Canvas!</h2>
+		  			<p>Take 20% Off 'Sale Must-Haves'</p>
+		  			<div class="btn-container">
+		  				<button class="btn-pink">Shop Women's</button>
+		  				<button class="btn-gray">Shop Mens</button>
+		  			</div>
+		  		</div>
+			</div>
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="dot-container" style="text-align:center">
+		  		<span class="dot" onclick="currentSlide(1)"></span> 
+		  		<span class="dot" onclick="currentSlide(2)"></span> 
+		  		<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
+		</div>
+		<div class="banner-container">
+			<div class="item item-1">
+				<img src="https://livani-react.envytheme.com/_next/static/images/categories1-b467ebb8485559cdbc1530b3c8175d33.jpg" class="banner-img"/>
+				<div class="txt-frame">
+					<span>Don't Miss Today</span>
+					<h2>50% OFF</h2>
+				</div> 
+				<button class="btn-pink">DIscover Now</button>
+			</div>
+			<div class="item item-2">
+				<img src="https://livani-react.envytheme.com/_next/static/images/categories2-576415a29304115e08be923ddebafca5.jpg" class="banner-img"/>
+				<div class="txt-frame">
+					<span>Don't Miss Today</span>
+					<h2>50% OFF</h2>
+				</div> 
+				<button class="btn-pink">DIscover Now</button>
+			</div>
+			<div class="item item-3">
+				<img src="https://livani-react.envytheme.com/_next/static/images/categories3-d589e5d06fb3ebd48d28f804250e9371.jpg" class="banner-img"/>
+				<div class="txt-frame">
+					<span>Don't Miss Today</span>
+					<h2>50% OFF</h2>
+				</div> 
+				<button class="btn-pink">DIscover Now</button>
+			</div>
+			<div class="item item-4">
+				<img src="https://livani-react.envytheme.com/_next/static/images/categories4-4805bf91a67631aa07c7ca2c541ef131.jpg" class="banner-img"/>
+				<div class="txt-frame">
+					<span>Don't Miss Today</span>
+					<h2>50% OFF</h2>
+				</div> 
+				<button class="btn-pink">DIscover Now</button>
+			</div>
+		</div>
+		<div class="recent">
+			<h1>Recent Products</h1>
+		</div>
 	</div>
-	</div>
+	
+	<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	
 </body>
 </html>

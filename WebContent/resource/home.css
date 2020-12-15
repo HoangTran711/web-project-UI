@@ -1,64 +1,220 @@
-.home {
-	overflow:hidden;
-	max-width:100%;
+* {box-sizing:border-box}
+body {
+	margin:0;
+	padding:0;
 }
-.carousel {
-	margin-bottom:60px !important;
+/* Slideshow container */
+.slideshow-container {
+  width:100%;
+  margin-top:80px !important;
+  position: relative;
+}
+.dot-container {
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+/* Hide the images by default */
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.mySlides {
+	position: relative;
+}
+.mySlides .text {
+	position:absolute;
+	color: black;
+	top:50%;
+	left:50%;
+	width:390px;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items:center;
+	height:200px;
+	transform:translate(-50%, -50%);
+}
+.mySlides .text h4 {
+	font-weight:600;
+	font-size:25px;
+	line-height:0px;
+}
+.mySlides .text h2 {
+	font-weight:600;
+	font-size:55px;
+	line-height:0px;
+}
+.mySlides .text p {
+	font-size:20px;
+	line-height:0px;
+}
+.mySlides .text .btn-container {
+	display:flex;
+	flex-direction:row;
 	
 }
-.home .banner {
-	margin-top:50px;
+.btn-pink {
+	background-color: #f53f85;
+	border: 1px solid #f53f85;
+	color:white;
+	font-size:15px;
+	padding: 13px 20px;
+	font-weight:bold;
+	margin-right:10px;
+	text-transform:uppercase;
+	
+}
+.mySlides .text .btn-container .btn-gray {
+	background-color: transparent;
+	border: 1px solid black;
+	padding: 13px 20px;
+	font-weight:600;
+	font-size:15px;
+	text-transform:uppercase;
+	transition: all .5s;
+}
+.home-container .banner-container {
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 30px;
-	padding:0 50px;
+	padding:70px 50px;
 }
-.home .banner .banner-item  {
+.home-container .banner-container .item {
 	position:relative;
+	font-weight:600;
+	cursor:pointer;
+	
 }
-.home .banner .banner-item p {
-	font-weight: 600;
+.home-container .banner-container .item img{
+	width:310px;	
 }
-.home .banner .banner-item.item-1 {
-	color:white;
+.home-container .banner-container .item:hover .txt-frame {
+	transform: translateY(-50px)
 }
-.home .banner .banner-item.item-2 p {
-	color: #f53f85;
-}
-.home .banner .banner-item.item-3 p {
-	color: #f53f85;
-}
-.home .banner .banner-item img {
-	width:100%;
-}
-.home .banner .banner-item:hover .txt-frame{
-	transform: translateY(-50px);
-}
-.home .banner .banner-item:hover .btn-banner {
-	transform:translatey(0px);
-	background-color:#f53f85 !important;
-	color:white !important;
-}
-.btn-banner {
-	border: 1px solid #f53f85 !important;
-	background-color: transparent !important;
-	position:absolute;
+.home-container .banner-container .item .txt-frame {
 	bottom:20px;
-	right:45px;
-	transform: translateY(200px);
+	right:20px;
+	position:absolute;
+	color:white;
 	transition: all .5s;
 }
-.home .banner .banner-item .txt-frame {
-	transition: all .4s;
-	position:absolute;
-	bottom: 20px;
-	right:20px;
+.home-container .banner-container .item:hover  .btn-pink {
+	opacity:1;
+	transform:translateY(0)
 }
-.home .banner .banner-item.item-4 {
+.home-container .banner-container .item  .btn-pink {
+	position:absolute;
+	z-index:1000;
+	bottom: 20px;
+	right:10px;
+	transform: translateY(30px);
+	opacity:0;
+	transition: all .5s;
+	
+}
+.home-container .banner-container .item-2 .txt-frame span{
+	color:#f53f85 !important;
+	
+}
+.home-container .banner-container .item-3 .txt-frame span{
+	color:#f53f85 !important;
+	
+}
+.home-container .banner-container .item-3 .txt-frame {
+	color:black;
+}
+.home-container .banner-container .item .txt-frame h2{
+	line-height:5px;
+	font-weight:600;
+}
+.mySlides .text .btn-container .btn-gray:hover {
+	background-color: #f53f85;
+	border: 1px solid #f53f85;
 	color:white;
 }
-.home .banner .banner-item .txt-frame h3 {
-	line-height: 0;
+.mySlides .text-2 {
+	left:250px !important;
+}
+.mySlides .text-3 {
+	width:800px !important;
 	
-	
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
