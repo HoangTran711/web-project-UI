@@ -10,10 +10,11 @@
 </head>
 <body>
 	<div class="navbar">
-		<img src="<%=request.getContextPath() + "/asset/lsb.png"%>" class="nav-logo">
+		<img src="<%=request.getContextPath() + "/asset/lsb.png"%>
+		" class="nav-logo">
 		
 		<ul class="nav-list">
-			<li class="item">
+			<li class="item"><
 				<span>Home</span>
 				<i class="fas fa-chevron-down"></i>
 			</li>

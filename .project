@@ -28,4 +28,21 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/asset/im2.png</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/im2.png</locationURI>
+		</link>
+		<link>
+			<name>WebContent/asset/im3.png</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/im3.png</locationURI>
+		</link>
+		<link>
+			<name>WebContent/asset/im4.png</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/im4.png</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -1,0 +1,13 @@
+body {
+	width: 20vw;
+    height: 20vh;
+}
+
+.sidebar-container {
+	
+	width: 100vw;
+    height: 100vh;
+}
+.header {
+	background-image: url('../asset/bg-3.jpg');
+}
