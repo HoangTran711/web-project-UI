@@ -21,7 +21,6 @@
 
 			<div class="mySlides fade">
 		  		<div class="numbertext">1 / 3</div>
-		 
 		 		<img src=" https://livani-react.envytheme.com/_next/static/media/main-banner1.037c44b65691964462935770ee2e8107.jpg" style="width:100%">
 		  		<div class="text">
 		  			<h4>Limited Time Offer!</h4>

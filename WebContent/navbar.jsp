@@ -16,22 +16,52 @@
 			<li class="item">
 				<span>Home</span>
 				<i class="fas fa-chevron-down"></i>
+				<ul class="dropdown-menu">
+					<li class="item">Home 1</li>
+					<li class="item">Home 2</li>
+					<li class="item">Home 3</li>
+					<li class="item">Home 4</li>
+				</ul>
 			</li>
 			<li class="item">
 				<span>Shop</span>
 				<i class="fas fa-chevron-down"></i>
+				<ul class="dropdown-menu">
+					<li class="item">Home 1</li>
+					<li class="item">Home 2</li>
+					<li class="item">Home 3</li>
+					<li class="item">Home 4</li>
+				</ul>
 			</li>
 			<li class="item">
 				<span>Pages</span>
 				<i class="fas fa-chevron-down"></i>
+				<ul class="dropdown-menu">
+					<li class="item">Home 1</li>
+					<li class="item">Home 2</li>
+					<li class="item">Home 3</li>
+					<li class="item">Home 4</li>
+				</ul>
 			</li>
 			<li class="item">
 				<span>Women's</span>
 				<i class="fas fa-chevron-down"></i>
+				<ul class="dropdown-menu">
+					<li class="item">Home 1</li>
+					<li class="item">Home 2</li>
+					<li class="item">Home 3</li>
+					<li class="item">Home 4</li>
+				</ul>
 			</li>
 			<li class="item">
 				<span>Men's</span>
 				<i class="fas fa-chevron-down"></i>
+				<ul class="dropdown-menu">
+					<li class="item">Home 1</li>
+					<li class="item">Home 2</li>
+					<li class="item">Home 3</li>
+					<li class="item">Home 4</li>
+				</ul>
 			</li>
 		</ul>
 		<div class="nav-icon">
