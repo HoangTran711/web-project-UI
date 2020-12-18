@@ -72,9 +72,22 @@
 					<span>0</span>
 				</div>
 			</div>
-			<i class="fas fa-bars icon"></i>
+			<i onclick="onHandleMenu()" class="fas fa-bars icon"></i>
 		</div>
 		
 	</div>
+	<script type="text/javascript">
+	function onHandleMenu() {
+		var opened = localStorage.getItem("sidebar");
+		console.log(localStorage)
+		if(opened == 'closed' || !opened) {
+			localStorage.setItem("sidebar", "opened");
+			document.querySelector(".about").style.transform = "translateX(0px)";
+		} else {
+			localStorage.setItem("sidebar", "closed");
+			document.querySelector(".about").style.transform = "translateX(450px)";
+		}
+	}
+	</script>
 </body>
 </html>

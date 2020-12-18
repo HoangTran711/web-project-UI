@@ -222,7 +222,7 @@ body {
 	background-color:white;
 }
 .home-container .banner-container .item img{
-	width:310px;	
+	width:100%;	
 }
 .home-container .banner-container .item:hover .txt-frame {
 	transform: translateY(-50px)
@@ -274,6 +274,18 @@ body {
 }
 .popular-products {
 	padding-top:100px;
+}
+.home-container .overlay{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:1000000000000;	
+	background-color: rgba(8,8,8,.8);
+	visibility:hidden;
+	opacity:0;
+	transition:all .3s;
 }
 .footer .instagram-container {
 	width:100vw;

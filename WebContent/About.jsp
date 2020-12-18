@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="about">
-		<div class="header-about">
+		<div class="header">
 			<h2>About</h2>
 		</div>
 		

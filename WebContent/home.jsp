@@ -17,6 +17,7 @@
 </head>
 <body>
 	<div class="home-container">
+		<div onclick="onHandleMenu()" class="overlay"></div>
 		<div class="slideshow-container">
 
 			<div class="mySlides fade">
@@ -281,11 +282,26 @@
 			if(opened == 'closed' || !opened) {
 				localStorage.setItem("sidebar", "opened");
 				document.querySelector(".about").style.transform = "translateX(0px)";
+				document.querySelector(".overlay").style.opacity = 1;
+				document.querySelector(".overlay").style.visibility = 'visible';
+				
+			} else {
+				localStorage.setItem("sidebar", "closed");
+				document.querySelector(".about").style.transform = "translateX(450px)";
+				document.querySelector(".overlay").style.opacity = 0;
+				document.querySelector(".overlay").style.visibility = 'hidden';
+			}
+		}
+		function checkOpenedMenu () {
+			var opened = localStorage.getItem("sidebar");
+			console.log(localStorage)
+			if(opened == 'closed' || !opened) {
 			} else {
 				localStorage.setItem("sidebar", "closed");
 				document.querySelector(".about").style.transform = "translateX(450px)";
 			}
 		}
+		checkOpenedMenu();
 		function plusSlides(n) {
 		  showSlides(slideIndex += n);
 		}

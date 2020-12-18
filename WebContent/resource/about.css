@@ -10,6 +10,15 @@ body {
 	background-color:white;
 	border-left: 1px solid black;
 	z-index:1000000000000000000000000;
-	transform:translateX(0px);
+	transform:translateX(450px);
 	transition:all .3s;
+	padding: 20px;
+}
+.about .header {
+	padding: 10px 0px;
+	border-bottom: 1px solid #D8D8D8;
+}
+.about .header h2 {
+	margin: 0;
+	padding:0;
 }
