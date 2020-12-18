@@ -17,7 +17,7 @@
 </head>
 <body>
 	<div class="home-container">
-		<div onclick="onHandleMenu()" class="overlay"></div>
+		<div onclick="onHandleOverlay()" class="overlay"></div>
 		<div class="slideshow-container">
 
 			<div class="mySlides fade">
@@ -75,7 +75,7 @@
 					<span>Don't Miss Today</span>
 					<h2>50% OFF</h2>
 				</div> 
-				<button onclick="onHandleMenu()" class="btn-pink">DIscover Now</button>
+				<button onclick="onHandleCart()" class="btn-pink">DIscover Now</button>
 			</div>
 			<div class="item item-2">
 				<img src="https://livani-react.envytheme.com/_next/static/images/categories2-576415a29304115e08be923ddebafca5.jpg" class="banner-img"/>
@@ -173,6 +173,8 @@
 		</div>
 		<div id="about">
 		</div>
+		<div id="shop-cart">
+		</div>
 		<div class="footer">
 			<div class="instagram-container">
 				<div class="item item-1">
@@ -213,6 +215,7 @@
 	<script>
 	$(function(){
 		$('#about').load('About.jsp')
+		$('#shop-cart').load('shop-cart.jsp')
 	})
 	const api_url = "https://web-pro-74ce5-default-rtdb.firebaseio.com/.json";
 
@@ -276,6 +279,30 @@
 		} 
 		var slideIndex = 1;
 		showSlides(slideIndex);
+		function onHandleOverlay () {
+			var element = localStorage.getItem("sidebar");
+			if(element === 'opened') {
+				console.log(1)
+				onHandleMenu()
+			} else if(element === 'closed') {
+				onHandleCart()
+			}
+		}
+		function onHandleCart() {
+			var opened = localStorage.getItem("shop-cart");
+			if(opened == 'closed' || !opened) {
+				localStorage.setItem("shop-cart", "opened");
+				document.querySelector(".shop-cart").style.transform = "translateX(0px)";
+				document.querySelector(".overlay").style.opacity = 1;
+				document.querySelector(".overlay").style.visibility = 'visible';
+				
+			} else {
+				localStorage.setItem("shop-cart", "closed");
+				document.querySelector(".shop-cart").style.transform = "translateX(450px)";
+				document.querySelector(".overlay").style.opacity = 0;
+				document.querySelector(".overlay").style.visibility = 'hidden';
+			}
+		}
 		function onHandleMenu() {
 			var opened = localStorage.getItem("sidebar");
 			console.log(localStorage)
@@ -292,6 +319,16 @@
 				document.querySelector(".overlay").style.visibility = 'hidden';
 			}
 		}
+		function checkOpenedCart () {
+			var opened = localStorage.getItem("shop-cart");
+			console.log(localStorage)
+			if(opened == 'closed' || !opened) {
+			} else {
+				localStorage.setItem("shop-cart", "closed");
+				document.querySelector(".shop-cart").style.transform = "translateX(450px)";
+			}
+		}
+		checkOpenedCart()
 		function checkOpenedMenu () {
 			var opened = localStorage.getItem("sidebar");
 			console.log(localStorage)

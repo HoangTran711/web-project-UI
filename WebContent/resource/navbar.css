@@ -77,10 +77,13 @@ body {
 	flex-direction:row;
 	margin-right:80px;
 }
-.navbar  .nav-icon .shop-cart {
+.navbar  .nav-icon i {
+	cursor:pointer;
+}
+.navbar  .nav-icon .shop-cart-container {
 	position:relative;
 }
-.navbar  .nav-icon .shop-cart .ab-top{
+.navbar  .nav-icon .shop-cart-container .ab-top{
 	font-size:10px;
 	top:-10px;
 	right:-8px;

@@ -1,0 +1,28 @@
+body {
+	position: relative;
+}
+.shop-cart {
+	top:0;
+	right:0;
+	position:fixed;
+	width:30%;
+	height:100%;
+	background-color:white;
+	border-left: 1px solid #D8D8D8;
+	z-index:10000000000000000000;
+	transform:translateX(450px);
+	transition:all .3s;
+	padding: 50px;
+}
+.btn-cart {
+	width:100%;
+	margin-top: 20px;
+}
+.shop-cart h2 {
+	margin:0;
+	padding:0;
+}
+.shop-cart .header {
+	padding: 10px 0px;
+	border-bottom: 1px solid #D8D8D8;
+}

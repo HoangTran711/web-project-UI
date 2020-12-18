@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Navbar</title>
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 <link rel="stylesheet" href="<%=request.getContextPath()+"/resource/navbar.css"%>">
 </head>
@@ -66,7 +65,7 @@
 		</ul>
 		<div class="nav-icon">
 			<i class="fas fa-search icon"></i>
-			<div class="shop-cart icon">
+			<div onclick="onHandleCart()" class="shop-cart-container icon">
 				<i class="fas fa-shopping-cart"></i>
 				<div class="ab-top">
 					<span>0</span>
@@ -77,6 +76,21 @@
 		
 	</div>
 	<script type="text/javascript">
+	function onHandleCart() {
+		var opened = localStorage.getItem("shop-cart");
+		if(opened == 'closed' || !opened) {
+			localStorage.setItem("shop-cart", "opened");
+			document.querySelector(".shop-cart").style.transform = "translateX(0px)";
+			document.querySelector(".overlay").style.opacity = 1;
+			document.querySelector(".overlay").style.visibility = 'visible';
+			
+		} else {
+			localStorage.setItem("shop-cart", "closed");
+			document.querySelector(".shop-cart").style.transform = "translateX(450px)";
+			document.querySelector(".overlay").style.opacity = 0;
+			document.querySelector(".overlay").style.visibility = 'hidden';
+		}
+	}
 	function onHandleMenu() {
 		var opened = localStorage.getItem("sidebar");
 		console.log(localStorage)
