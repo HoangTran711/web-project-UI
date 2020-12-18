@@ -74,7 +74,7 @@
 					<span>Don't Miss Today</span>
 					<h2>50% OFF</h2>
 				</div> 
-				<button class="btn-pink">DIscover Now</button>
+				<button onclick="onHandleMenu()" class="btn-pink">DIscover Now</button>
 			</div>
 			<div class="item item-2">
 				<img src="https://livani-react.envytheme.com/_next/static/images/categories2-576415a29304115e08be923ddebafca5.jpg" class="banner-img"/>
@@ -126,7 +126,7 @@
 		<div class="owl-container">
 			<div id="owl-demo" class="owl-carousel owl-theme">
           
-			  <div class="item">
+			  <div class="item" >
 			  	<div class="container-icon">
 			  		<i class="fas fa-phone"></i>
 			  	</div>
@@ -170,6 +170,8 @@
 			  </div>			 
 			</div>
 		</div>
+		<div id="about">
+		</div>
 		<div class="footer">
 			<div class="instagram-container">
 				<div class="item item-1">
@@ -196,11 +198,21 @@
 					<img src="https://livani-react.envytheme.com/_next/static/images/insta6-a7e97921a2a81d6835ac186e600065a4.jpg" >
 					<i class="fab fa-instagram"></i>
 				</div>
-			</div>
+				<div class="item item-1">
+					<img src="https://livani-react.envytheme.com/_next/static/images/insta1-0042285234e1e56409cb5f01e56a584c.jpg" alt="hinh anh">
+					<i class="fab fa-instagram"></i>
+				</div>
+				<div class="item item-2">
+					<img src="https://livani-react.envytheme.com/_next/static/images/insta4-9d7ddbf34ce03c4f9c12f543f0fa1a57.jpg" >
+					<i class="fab fa-instagram"></i>
+				</div>
 		</div>
 	</div>
 	
 	<script>
+	$(function(){
+		$('#about').load('About.jsp')
+	})
 	const api_url = "https://web-pro-74ce5-default-rtdb.firebaseio.com/.json";
 
 	// Defining async function 
@@ -242,11 +254,20 @@
 	        	"<div class='txt-frame'>" + 
 	        		"<h2 class='item-title'>" + user.name + "</h2>" +
 	        	 	"<div class='container-price'>"+
+	        	 		"<div class='price'>" +
 	        	 		"<p class='old'>"+"$"+ user.oldPrice +"</p>"+
-						"<p class='new'>"+"$"+ user.price + "</p>" +       	 	
-	        		"</div>" +
-	        	"</div>"
-	       + "</div>"
+						"<p class='new'>"+"$"+ user.price + "</p>" +   
+						"</div>"+
+						"<div class='five-stars'>" +
+							"<i class='fas fa-star'></i>"+
+							"<i class='fas fa-star'></i>"+
+							"<i class='fas fa-star'></i>"+
+							"<i class='fas fa-star'></i>"+
+							"<i class='fas fa-star'></i>"+
+						"</div>"+
+	        			"</div>" +
+	        		"</div>"
+	       		+ "</div>"
 	    // Setting innerHTML as tab variable 
 	    }
 	    document.getElementById("product-list").innerHTML = tab;
@@ -254,7 +275,17 @@
 		} 
 		var slideIndex = 1;
 		showSlides(slideIndex);
-		
+		function onHandleMenu() {
+			var opened = localStorage.getItem("sidebar");
+			console.log(localStorage)
+			if(opened == 'closed' || !opened) {
+				localStorage.setItem("sidebar", "opened");
+				document.querySelector(".about").style.transform = "translateX(0px)";
+			} else {
+				localStorage.setItem("sidebar", "closed");
+				document.querySelector(".about").style.transform = "translateX(450px)";
+			}
+		}
 		function plusSlides(n) {
 		  showSlides(slideIndex += n);
 		}
@@ -278,6 +309,7 @@
 		  slides[slideIndex-1].style.display = "block";  
 		  dots[slideIndex-1].className += " active";
 		}
+		setTimeout(showSlides, 2000);
 		$(document).ready(function() {
 			 
 			  $("#owl-demo").owlCarousel({
