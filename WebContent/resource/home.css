@@ -6,6 +6,11 @@ body {
 	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-size:cover;
+<<<<<<< HEAD
+=======
+  	width:100vw;
+  	display: hidden;
+>>>>>>> ac26741f67c17354dec89e3122421337f019f897
   	overflow-x: hidden;
 }
 .product-list {
