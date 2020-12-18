@@ -6,6 +6,9 @@ body {
 	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-size:cover;
+  	width:100vw;
+  	display: hidden;
+  	overflow-x: hidden;
 }
 .product-list {
 	display:grid;
