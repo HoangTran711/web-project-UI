@@ -24,6 +24,13 @@ body {
     width:35%;
     height:100%;
 }
+.login__input .error-input {
+	color:red;
+	font-size:12px;
+	position:absolute;
+	top:25px;
+	left:0;
+}
 .login__input input {
     padding-left: 40px;
     padding-top: 10px;
@@ -65,6 +72,11 @@ body {
 .login .tool-container a{
     font-size: 12px;
     font-style: italic;
+    color:black;
+    text-decoration:none;
+}
+.login .tool-container a:hover {
+	text-decoration: underline;
 }
 .login .tool-container a:hover {
     text-decoration: underline;
