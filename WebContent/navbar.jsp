@@ -68,7 +68,7 @@
 			<div onclick="onHandleCart()" class="shop-cart-container icon">
 				<i class="fas fa-shopping-cart"></i>
 				<div class="ab-top">
-					<span>0</span>
+					<span id="number-products">0</span>
 				</div>
 			</div>
 			<i onclick="onHandleMenu()" class="fas fa-bars icon"></i>
@@ -91,6 +91,13 @@
 			document.querySelector(".overlay").style.visibility = 'hidden';
 		}
 	}
+	function onUpdateCart() {
+		const cartProducts  = JSON.parse(localStorage.getItem('cart'))
+		if(cartProducts) {
+			document.getElementById('number-products').innerHTML = cartProducts.length
+		}
+	} 
+	onUpdateCart()
 	function onHandleMenu() {
 		var opened = localStorage.getItem("sidebar");
 		console.log(localStorage)

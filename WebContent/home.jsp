@@ -19,9 +19,7 @@
 	<div class="home-container">
 		<div onclick="onHandleOverlay()" class="overlay"></div>
 		<div class="slideshow-container">
-
 			<div class="mySlides fade">
-		  		<div class="numbertext">1 / 3</div>
 		 		<img src=" https://livani-react.envytheme.com/_next/static/media/main-banner1.037c44b65691964462935770ee2e8107.jpg" style="width:100%">
 		  		<div class="text">
 		  			<h4>Limited Time Offer!</h4>
@@ -35,7 +33,6 @@
 			</div>
 		
 			<div class="mySlides fade">
-		  		<div class="numbertext">2 / 3</div>
 		 		<img src="https://livani-react.envytheme.com/_next/static/media/main-banner2.b450957bbc5ad97ca45c9a721e2f6bae.jpg" style="width:100%">
 		  		<div class="text text-2">
 		  			<h4>Limited Time Offer!</h4>
@@ -48,7 +45,6 @@
 		  		</div>
 			</div>
 			<div class="mySlides fade">
-		  		<div class="numbertext">3 / 3</div>
 		  		<img src="https://livani-react.envytheme.com/_next/static/media/main-banner3.f1172bd804136243b4ef1752767b8724.jpg" style="width:100%">
 		  		<div class="text text-2 text-3">
 		  			<h4>Buy Now From Livani!</h4>
@@ -162,6 +158,7 @@
 			  		<i class="fas fa-percent"></i>
 			  	</div>
 			  	<h2>Weekend Discount Coupon</h2>
+			  	
 			  </div>
 			  <div class="item">
 			  	<div class="container-icon">
@@ -251,7 +248,6 @@
 	    
 	    // Loop to access all rows  
 	    for (let user of tempData) {
-	    	console.log(user.name)
 	        tab += "<div class='item'>" +
 	        	"<img class='item-img' src='" + user.imgUrl + "'>" +
 	        	"<img class='img-hover' src='"+ user.imgUrlHover + "'>" +
@@ -260,7 +256,7 @@
 	        	 	"<div class='container-price'>"+
 	        	 		"<div class='price'>" +
 	        	 		"<p class='old'>"+"$"+ user.oldPrice +"</p>"+
-						"<p class='new'>"+"$"+ user.price + "</p>" +   
+						"<p class='new'>"+"$"+ user.price + "</p>" +  
 						"</div>"+
 						"<div class='five-stars'>" +
 							"<i class='fas fa-star'></i>"+
@@ -269,6 +265,7 @@
 							"<i class='fas fa-star'></i>"+
 							"<i class='fas fa-star'></i>"+
 						"</div>"+
+						"<div onclick=onAddToCart('"+user._id +"') class='add-to-cart'><a>Add To Cart</a></div>"+
 	        			"</div>" +
 	        		"</div>"
 	       		+ "</div>"
@@ -281,11 +278,30 @@
 		showSlides(slideIndex);
 		function onHandleOverlay () {
 			var element = localStorage.getItem("sidebar");
-			if(element === 'opened') {
+			if(element === 'opened'|| !element) {
 				console.log(1)
 				onHandleMenu()
 			} else if(element === 'closed') {
 				onHandleCart()
+			}
+		}
+		function onAddToCart (_id) {
+			const presentCart = JSON.parse(localStorage.getItem('cart'))
+			if (presentCart) {
+				presentCart.push(_id)
+				localStorage.setItem('cart', JSON.stringify(presentCart))
+			} else {
+				const temp = []
+				temp.push(_id)
+				localStorage.setItem('cart', JSON.stringify(temp))
+			}
+			onUpdateCart()
+			getCartList()
+		}
+		function onUpdateCart() {
+			const cartProducts  = JSON.parse(localStorage.getItem('cart'))
+			if(cartProducts) {
+				document.getElementById('number-products').innerHTML = cartProducts.length
 			}
 		}
 		function onHandleCart() {

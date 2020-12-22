@@ -13,6 +13,7 @@ body {
 	transform:translateX(450px);
 	transition:all .3s;
 	padding: 50px;
+	overflow:scroll;
 }
 .btn-cart {
 	width:100%;
@@ -25,4 +26,34 @@ body {
 .shop-cart .header {
 	padding: 10px 0px;
 	border-bottom: 1px solid #D8D8D8;
+}
+.cart-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+.cart-list li {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:flex-start;
+	margin-top:10px;
+	
+}
+.cart-list li .txt-frame  {
+	margin-left:15px;
+}
+.cart-list li h3 {
+	padding: 0;
+	margin:0;
+}
+.cart-list li .quantity {
+	font-size:15px;
+	color:#BDBDBD;
+}
+.cart-list li .name {
+	margin-left:5px;
+}
+.cart-list li img {
+	width:50px;
 }

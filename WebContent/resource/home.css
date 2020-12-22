@@ -15,6 +15,16 @@ body {
 	grid-gap:30px;
 	padding:50px 200px;
 }
+.add-to-cart {
+	padding: 0 10px;
+	opacity:0;
+	transition:all .3s;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:white;
+	z-index:1;
+}
 .owl-item {
 	width:320px !important;
 }
@@ -56,19 +66,23 @@ body {
 	opacity:0;
 	transition:all .3s;
 }
-.product-list .item .container-price p {
-	line-height:0;
-}
 .product-list .item .container-price {
-		margin-top:20px;
+	width:100%;
+	margin-top:20px;
 	display:flex;
 	flex-direction: row;
 	align-items:center;
 	justify-content:space-between;
 	font-size:18px;
 	font-weight:600;
+	position:relative;
+}
+.product-list .item:hover .add-to-cart {
+	
+	opacity:1;
 }
 .price {
+	position:relative;
 	display:flex;
 	flex-direction: row;
 }

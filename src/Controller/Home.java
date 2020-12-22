@@ -11,16 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Home
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/home")
+public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Home() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -29,8 +30,9 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();
-		out.print("34214234");
+		RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
+		  
+		rd.forward(request, response);
 	}
 
 	/**
