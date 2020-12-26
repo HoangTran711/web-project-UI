@@ -30,8 +30,7 @@ public class Home extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
-		  
+		RequestDispatcher rd=request.getRequestDispatcher("home.jsp");  
 		rd.forward(request, response);
 	}
 
